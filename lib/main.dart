@@ -4,21 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
-class Cat {
-  final String name;
-  Cat(this.name);
+Stream<String> getName() {
+  return Stream.periodic(const Duration(seconds: 1), (value) => 'Foo');
 }
 
-// Add logic to existing classes
-extension Run on Cat {
-  void run() {
-    print('Cat $name is running');
+void test() async {
+  await for (final value in getName()) {
+    print(value);
   }
-}
-
-void test() {
-  final meow = Cat('Fluffers');
-  meow.run();
+  print('Stream finished working');
 }
 
 class MyApp extends StatelessWidget {
