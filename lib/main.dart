@@ -5,10 +5,10 @@ void main() {
 }
 
 void test() {
-  // Multiply string is possible
-  final name = "Foo";
-  final nameTimes20 = name * 20;
-  print(nameTimes20);
+  // Sets
+  var names = {'foo', 'bar', 'baz'};
+  names.add('foo');
+  print(names);
 }
 
 class MyApp extends StatelessWidget {
