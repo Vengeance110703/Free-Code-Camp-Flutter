@@ -4,17 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
-// Generator. Values in Iterables are calculated during runtime while List has all values available directly
-Iterable<int> getNumbers() sync* {
-  yield 1;
-  yield 2;
-  yield 3;
+class Pair<A, B> {
+  final A value1;
+  final B value2;
+
+  Pair(this.value1, this.value2);
 }
 
-void test() async {
-  for (final value in getNumbers()) {
-    print(value);
-  }
+void test() {
+  final names = Pair('foo', 20);
 }
 
 class MyApp extends StatelessWidget {
