@@ -4,15 +4,17 @@ void main() {
   runApp(const MyApp());
 }
 
-Stream<String> getName() {
-  return Stream.periodic(const Duration(seconds: 1), (value) => 'Foo');
+// Generator. Values in Iterables are calculated during runtime while List has all values available directly
+Iterable<int> getNumbers() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
 void test() async {
-  await for (final value in getName()) {
+  for (final value in getNumbers()) {
     print(value);
   }
-  print('Stream finished working');
 }
 
 class MyApp extends StatelessWidget {
