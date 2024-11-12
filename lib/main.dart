@@ -7,23 +7,18 @@ void main() {
 class Cat {
   final String name;
   Cat(this.name);
+}
 
-  // Custom Operator
-  @override
-  bool operator ==(covariant Cat other) => other.name == name;
-
-  @override
-  int get hashCode => name.hashCode;
+// Add logic to existing classes
+extension Run on Cat {
+  void run() {
+    print('Cat $name is running');
+  }
 }
 
 void test() {
-  final cat1 = Cat('Foo');
-  final cat2 = Cat('Foo');
-  if (cat1 == cat2) {
-    print('Equal');
-  } else {
-    print('Not Equal');
-  }
+  final meow = Cat('Fluffers');
+  meow.run();
 }
 
 class MyApp extends StatelessWidget {
