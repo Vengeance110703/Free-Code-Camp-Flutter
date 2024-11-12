@@ -8,15 +8,22 @@ class Cat {
   final String name;
   Cat(this.name);
 
-  // Factory Constructor, used when you are using an instance of a class with the same values multiple times in code
-  factory Cat.fluffball() {
-    return Cat('Fluff Ball');
-  }
+  // Custom Operator
+  @override
+  bool operator ==(covariant Cat other) => other.name == name;
+
+  @override
+  int get hashCode => name.hashCode;
 }
 
 void test() {
-  final fluffBall = Cat.fluffball();
-  print(fluffBall.name);
+  final cat1 = Cat('Foo');
+  final cat2 = Cat('Foo');
+  if (cat1 == cat2) {
+    print('Equal');
+  } else {
+    print('Not Equal');
+  }
 }
 
 class MyApp extends StatelessWidget {
