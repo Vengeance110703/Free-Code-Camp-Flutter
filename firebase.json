@@ -1,0 +1,21 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "free-code-camp-flutter-app",
+          "appId": "1:645041396775:android:d2f92f82f3859c7a074202",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "free-code-camp-flutter-app",
+          "configurations": {
+            "android": "1:645041396775:android:d2f92f82f3859c7a074202"
+          }
+        }
+      }
+    }
+  }
+}

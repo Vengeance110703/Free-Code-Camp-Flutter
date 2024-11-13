@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645041396775",
+    "project_id": "free-code-camp-flutter-app",
+    "storage_bucket": "free-code-camp-flutter-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645041396775:android:d2f92f82f3859c7a074202",
+        "android_client_info": {
+          "package_name": "com.example.free_code_camp_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVwr0vHJZFZTXV-Lf0_WQx4xp0pxuhPrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
